@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-night-950 text-pearl-50 antialiased;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+
+  ::selection {
+    @apply bg-gold-400/35;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/8 backdrop-blur supports-[backdrop-filter]:bg-white/6;
+  }
+}
